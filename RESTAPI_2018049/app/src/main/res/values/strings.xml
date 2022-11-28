@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Food</string>
+    <string name="logout">logout</string>
+    <string name="profile">Profile</string>
+    <string name="posts">Posts</string>
+    <string name="kotdev">kotdev</string>
+    <string name="dagger2_examples_with_retrofit2_mvvm_architecture_android_jetpack_s_navigation_component_and_more">Dagger2 examples with Retrofit2, MVVM architecture, Android Jetpacks Navigation component and more.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

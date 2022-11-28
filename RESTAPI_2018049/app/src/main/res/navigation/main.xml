@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@+id/profileScreen">
+
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.kotdev.food.app.ui.fragments.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profiler">
+    </fragment>
+
+    <fragment
+        android:id="@+id/postsScreen"
+        android:name="com.kotdev.food.app.ui.fragments.PostsFragment"
+        android:label="@string/posts"
+        tools:layout="@layout/fragment_post">
+        <action
+            android:id="@+id/action_postsScreen_to_detalRecipeFragment"
+            app:destination="@id/detalRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipesListFragment"
+        android:name="com.kotdev.food.app.ui.fragments.RecipesListFragment"
+        android:label="Recipes"
+        tools:layout="@layout/fragment_recipes_list" />
+    <action android:id="@+id/action_global_recipesListFragment"
+        app:destination="@id/recipesListFragment"
+        />
+    <fragment
+        android:id="@+id/detalRecipeFragment"
+        android:name="com.kotdev.food.app.ui.fragments.DetailRecipeFragment"
+        android:label="Detail Recipe"
+        tools:layout="@layout/fragment_detal_recipe" >
+        <action
+            android:id="@+id/action_detalRecipeFragment_to_postsScreen"
+            app:destination="@id/postsScreen"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/postsScreen"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>
